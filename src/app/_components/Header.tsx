@@ -1,7 +1,8 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { LayoutGrid, Search, ShoppingBag } from "lucide-react";
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,10 +12,36 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+interface Category {
+  _id: string;
+  name: string;
+  icon: {
+    url: string;
+  } | null;
+}
+
 const Header: FC = () => {
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  const baseUrl = "http://localhost:3000";
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/api/categories?populate=*`);
+        const data = await response.json();
+        setCategories(data);
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   return (
     <header className="flex p-5 shadow-md items-center justify-between ">
-      {/* left side logo category search */}
       <div className="flex items-center gap-8">
         <Image src="/logo.png" alt="logo" width={150} height={100} />
         <DropdownMenu>
@@ -25,12 +52,26 @@ const Header: FC = () => {
             </h2>
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuLabel>Categories</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Billing</DropdownMenuItem>
-            <DropdownMenuItem>Team</DropdownMenuItem>
-            <DropdownMenuItem>Subscription</DropdownMenuItem>
+            {categories.map((category) => (
+              <DropdownMenuItem
+                key={category._id}
+                className="flex items-center cursor-pointer gap-2"
+              >
+                {category.icon?.url ? (
+                  <Image
+                    src={`${baseUrl}/${category.icon.url}`}
+                    alt={category.name}
+                    width={30}
+                    height={30}
+                  />
+                ) : (
+                  <span>No Icon</span>
+                )}
+                <h2 className="text-lg">{category.name}</h2>
+              </DropdownMenuItem>
+            ))}
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -39,7 +80,6 @@ const Header: FC = () => {
           <input type="text" placeholder="Search" className="outline-none" />
         </div>
       </div>
-      {/* right side cart login */}
       <div className="flex items-center gap-2">
         <h2 className="flex gap-2 items-center text-lg">
           <ShoppingBag /> 0
