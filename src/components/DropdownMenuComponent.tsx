@@ -14,9 +14,6 @@ import useCategories, { Category } from "@/hooks/useCategories";
 const DropdownMenuComponent: FC = () => {
   const { categories, loading, error } = useCategories();
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
-
   const renderedCategories = useMemo(() => {
     return categories.map((category: Category) => (
       <DropdownMenuItem
@@ -25,10 +22,11 @@ const DropdownMenuComponent: FC = () => {
       >
         {category.icon?.url ? (
           <Image
-            src={`${baseUrl}/${category.icon.url}`}
+            src={`/${category.icon.url}`}
             alt={category.name}
             width={30}
             height={30}
+            unoptimized
           />
         ) : (
           <span>No Icon</span>
@@ -36,7 +34,7 @@ const DropdownMenuComponent: FC = () => {
         <h2 className="text-lg">{category.name}</h2>
       </DropdownMenuItem>
     ));
-  }, [categories, baseUrl]);
+  }, [categories]);
 
   return (
     <DropdownMenu>
