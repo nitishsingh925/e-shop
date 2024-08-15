@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "66bb3a5931d5d19d936461f1"
+  },
+  "name": "Vegetables",
+  "icon": {
+    "url": "categories/vegetables.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb3eba31d5d19d936461f2"
+  },
+  "name": "Fruits",
+  "icon": {
+    "url": "categories/fruits.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb3fe131d5d19d936461f3"
+  },
+  "name": "Milk & Juice",
+  "icon": {
+    "url": "categories/milk.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb403c31d5d19d936461f4"
+  },
+  "name": "Bakery",
+  "icon": {
+    "url": "categories/Bakery.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb405531d5d19d936461f5"
+  },
+  "name": "Personal Care",
+  "icon": {
+    "url": "categories/personal.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb407b31d5d19d936461f6"
+  },
+  "name": "Grains",
+  "icon": {
+    "url": "categories/grains.png"
+  }
+},
+{
+  "_id": {
+    "$oid": "66bb409231d5d19d936461f7"
+  },
+  "name": "Chicken & Egg",
+  "icon": {
+    "url": "categories/chicken.png"
+  }
+}]
