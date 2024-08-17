@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "66be1facc246d23e4d046817"
+  },
+  "name": "Tata Salt",
+  "description": "India's leading iodized salt, trusted by millions.",
+  "mrp": 20,
+  "selling_price": 18,
+  "item_quantity_type": "1kg",
+  "slug": "tata-salt-1kg",
+  "categories": [
+    "Salt",
+    "Spices & Condiments"
+  ],
+  "image": "tata_salt_1kg.png"
+},
+{
+  "_id": {
+    "$oid": "66be1fe7c246d23e4d046818"
+  },
+  "name": "Aashirvaad Atta",
+  "description": "Premium quality whole wheat flour for soft and fluffy rotis.",
+  "mrp": 300,
+  "selling_price": 290,
+  "item_quantity_type": "5kg",
+  "slug": "aashirvaad-atta-5kg",
+  "categories": [
+    "Flours & Grains"
+  ],
+  "image": "aashirvaad_atta_5kg.png"
+},
+{
+  "_id": {
+    "$oid": "66be2000c246d23e4d046819"
+  },
+  "name": "Amul Butter",
+  "description": "Delicious and creamy butter made from fresh milk.",
+  "mrp": 49,
+  "selling_price": 47,
+  "item_quantity_type": "100g",
+  "slug": "amul-butter-100g",
+  "categories": [
+    "Dairy Products"
+  ],
+  "image": "amul_butter_100g.png"
+},
+{
+  "_id": {
+    "$oid": "66be2012c246d23e4d04681a"
+  },
+  "name": "Fortune Rice Bran Oil",
+  "description": "Heart-healthy cooking oil extracted from rice bran.",
+  "mrp": 190,
+  "selling_price": 180,
+  "item_quantity_type": "1L",
+  "slug": "fortune-rice-bran-oil-1l",
+  "categories": [
+    "Oils & Ghee"
+  ],
+  "image": "fortune_rice_bran_oil_1l.png"
+},
+{
+  "_id": {
+    "$oid": "66be2030c246d23e4d04681b"
+  },
+  "name": "MTR Masala Dosa Mix",
+  "description": "Instant dosa mix for quick and tasty masala dosas.",
+  "mrp": 85,
+  "selling_price": 80,
+  "item_quantity_type": "500g",
+  "slug": "mtr-masala-dosa-mix-500g",
+  "categories": [
+    "Instant Mixes"
+  ],
+  "image": "mtr_masala_dosa_mix_500g.png"
+},
+{
+  "_id": {
+    "$oid": "66be2046c246d23e4d04681c"
+  },
+  "name": "Basmati Rice",
+  "description": "Premium long-grain basmati rice, perfect for biryanis and pulaos.",
+  "mrp": 150,
+  "selling_price": 140,
+  "item_quantity_type": "1kg",
+  "slug": "basmati-rice-1kg",
+  "categories": [
+    "Rice & Grains"
+  ],
+  "image": "basmati_rice_1kg.png"
+},
+{
+  "_id": {
+    "$oid": "66be2067c246d23e4d04681d"
+  },
+  "name": "Mother Dairy Dahi",
+  "description": "Rich and creamy dahi made from pure milk.",
+  "mrp": 60,
+  "selling_price": 55,
+  "item_quantity_type": "500g",
+  "slug": "mother-dairy-dahi-500g",
+  "categories": [
+    "Dairy Products"
+  ],
+  "image": "mother_dairy_dahi_500g.png"
+}]
