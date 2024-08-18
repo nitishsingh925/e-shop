@@ -1,106 +1,171 @@
-[{
-  "_id": {
-    "$oid": "66be1facc246d23e4d046817"
+[
+  {
+    "_id": {
+      "$oid": "66be1facc246d23e4d046817"
+    },
+    "name": "Tata Salt",
+    "description": "India's leading iodized salt, trusted by millions.",
+    "mrp": 20,
+    "selling_price": 18,
+    "item_quantity_type": "1kg",
+    "slug": "tata-salt-1kg",
+    "categories": ["Salt", "Spices & Condiments"],
+    "image": "tata_salt_1kg.png"
   },
-  "name": "Tata Salt",
-  "description": "India's leading iodized salt, trusted by millions.",
-  "mrp": 20,
-  "selling_price": 18,
-  "item_quantity_type": "1kg",
-  "slug": "tata-salt-1kg",
-  "categories": [
-    "Salt",
-    "Spices & Condiments"
-  ],
-  "image": "tata_salt_1kg.png"
-},
-{
-  "_id": {
-    "$oid": "66be1fe7c246d23e4d046818"
+  {
+    "_id": {
+      "$oid": "66be1fe7c246d23e4d046818"
+    },
+    "name": "Aashirvaad Atta",
+    "description": "Premium quality whole wheat flour for soft and fluffy rotis.",
+    "mrp": 300,
+    "selling_price": 290,
+    "item_quantity_type": "5kg",
+    "slug": "aashirvaad-atta-5kg",
+    "categories": ["Flours & Grains"],
+    "image": "aashirvaad_atta_5kg.png"
   },
-  "name": "Aashirvaad Atta",
-  "description": "Premium quality whole wheat flour for soft and fluffy rotis.",
-  "mrp": 300,
-  "selling_price": 290,
-  "item_quantity_type": "5kg",
-  "slug": "aashirvaad-atta-5kg",
-  "categories": [
-    "Flours & Grains"
-  ],
-  "image": "aashirvaad_atta_5kg.png"
-},
-{
-  "_id": {
-    "$oid": "66be2000c246d23e4d046819"
+  {
+    "_id": {
+      "$oid": "66be2000c246d23e4d046819"
+    },
+    "name": "Amul Butter",
+    "description": "Delicious and creamy butter made from fresh milk.",
+    "mrp": 49,
+    "selling_price": 47,
+    "item_quantity_type": "100g",
+    "slug": "amul-butter-100g",
+    "categories": ["Dairy Products"],
+    "image": "amul_butter_100g.png"
   },
-  "name": "Amul Butter",
-  "description": "Delicious and creamy butter made from fresh milk.",
-  "mrp": 49,
-  "selling_price": 47,
-  "item_quantity_type": "100g",
-  "slug": "amul-butter-100g",
-  "categories": [
-    "Dairy Products"
-  ],
-  "image": "amul_butter_100g.png"
-},
-{
-  "_id": {
-    "$oid": "66be2012c246d23e4d04681a"
+  {
+    "_id": {
+      "$oid": "66be2012c246d23e4d04681a"
+    },
+    "name": "Fortune Rice Bran Oil",
+    "description": "Heart-healthy cooking oil extracted from rice bran.",
+    "mrp": 190,
+    "selling_price": 180,
+    "item_quantity_type": "1L",
+    "slug": "fortune-rice-bran-oil-1l",
+    "categories": ["Oils & Ghee"],
+    "image": "fortune_rice_bran_oil_1l.png"
   },
-  "name": "Fortune Rice Bran Oil",
-  "description": "Heart-healthy cooking oil extracted from rice bran.",
-  "mrp": 190,
-  "selling_price": 180,
-  "item_quantity_type": "1L",
-  "slug": "fortune-rice-bran-oil-1l",
-  "categories": [
-    "Oils & Ghee"
-  ],
-  "image": "fortune_rice_bran_oil_1l.png"
-},
-{
-  "_id": {
-    "$oid": "66be2030c246d23e4d04681b"
+  {
+    "_id": {
+      "$oid": "66be2030c246d23e4d04681b"
+    },
+    "name": "MTR Masala Dosa Mix",
+    "description": "Instant dosa mix for quick and tasty masala dosas.",
+    "mrp": 85,
+    "selling_price": 80,
+    "item_quantity_type": "500g",
+    "slug": "mtr-masala-dosa-mix-500g",
+    "categories": ["Instant Mixes"],
+    "image": "mtr_masala_dosa_mix_500g.png"
   },
-  "name": "MTR Masala Dosa Mix",
-  "description": "Instant dosa mix for quick and tasty masala dosas.",
-  "mrp": 85,
-  "selling_price": 80,
-  "item_quantity_type": "500g",
-  "slug": "mtr-masala-dosa-mix-500g",
-  "categories": [
-    "Instant Mixes"
-  ],
-  "image": "mtr_masala_dosa_mix_500g.png"
-},
-{
-  "_id": {
-    "$oid": "66be2046c246d23e4d04681c"
+  {
+    "_id": {
+      "$oid": "66be2046c246d23e4d04681c"
+    },
+    "name": "Basmati Rice",
+    "description": "Premium long-grain basmati rice, perfect for biryanis and pulaos.",
+    "mrp": 150,
+    "selling_price": 140,
+    "item_quantity_type": "1kg",
+    "slug": "basmati-rice-1kg",
+    "categories": ["Rice & Grains"],
+    "image": "basmati_rice_1kg.png"
   },
-  "name": "Basmati Rice",
-  "description": "Premium long-grain basmati rice, perfect for biryanis and pulaos.",
-  "mrp": 150,
-  "selling_price": 140,
-  "item_quantity_type": "1kg",
-  "slug": "basmati-rice-1kg",
-  "categories": [
-    "Rice & Grains"
-  ],
-  "image": "basmati_rice_1kg.png"
-},
-{
-  "_id": {
-    "$oid": "66be2067c246d23e4d04681d"
+  {
+    "_id": {
+      "$oid": "66be2067c246d23e4d04681d"
+    },
+    "name": "Mother Dairy Dahi",
+    "description": "Rich and creamy dahi made from pure milk.",
+    "mrp": 60,
+    "selling_price": 55,
+    "item_quantity_type": "500g",
+    "slug": "mother-dairy-dahi-500g",
+    "categories": ["Dairy Products"],
+    "image": "mother_dairy_dahi_500g.png"
   },
-  "name": "Mother Dairy Dahi",
-  "description": "Rich and creamy dahi made from pure milk.",
-  "mrp": 60,
-  "selling_price": 55,
-  "item_quantity_type": "500g",
-  "slug": "mother-dairy-dahi-500g",
-  "categories": [
-    "Dairy Products"
-  ],
-  "image": "mother_dairy_dahi_500g.png"
-}]
+  {
+    "_id": {
+      "$oid": "66be2077c246d23e4d04681e"
+    },
+    "name": "Bru Instant Coffee",
+    "description": "Rich and aromatic instant coffee blend for a perfect start to your day.",
+    "mrp": 100,
+    "selling_price": 95,
+    "item_quantity_type": "100g",
+    "slug": "bru-instant-coffee-100g",
+    "categories": ["Beverages"],
+    "image": "bru_instant_coffee_100g.png"
+  },
+  {
+    "_id": {
+      "$oid": "66be2089c246d23e4d04681f"
+    },
+    "name": "Maggi Noodles",
+    "description": "Instant noodles with a spicy and tangy flavor.",
+    "mrp": 12,
+    "selling_price": 10,
+    "item_quantity_type": "70g",
+    "slug": "maggi-noodles-70g",
+    "categories": ["Instant Noodles"],
+    "image": "maggi_noodles_70g.png"
+  },
+  {
+    "_id": {
+      "$oid": "66be209bc246d23e4d046820"
+    },
+    "name": "Patanjali Honey",
+    "description": "Pure and natural honey sourced from the finest beekeepers.",
+    "mrp": 250,
+    "selling_price": 240,
+    "item_quantity_type": "500g",
+    "slug": "patanjali-honey-500g",
+    "categories": ["Spreads"],
+    "image": "patanjali_honey_500g.png"
+  },
+  {
+    "_id": {
+      "$oid": "66be20b1c246d23e4d046821"
+    },
+    "name": "Britannia Good Day Biscuits",
+    "description": "Crunchy and delicious biscuits with a rich butter flavor.",
+    "mrp": 25,
+    "selling_price": 22,
+    "item_quantity_type": "100g",
+    "slug": "britannia-good-day-biscuits-100g",
+    "categories": ["Snacks"],
+    "image": "britannia_good_day_biscuits_100g.png"
+  },
+  {
+    "_id": {
+      "$oid": "66be20c7c246d23e4d046822"
+    },
+    "name": "Dettol Handwash",
+    "description": "Antibacterial handwash for complete protection.",
+    "mrp": 75,
+    "selling_price": 70,
+    "item_quantity_type": "200ml",
+    "slug": "dettol-handwash-200ml",
+    "categories": ["Personal Care"],
+    "image": "dettol_handwash_200ml.png"
+  },
+  {
+    "_id": {
+      "$oid": "66be20e2c246d23e4d046823"
+    },
+    "name": "Dove Soap",
+    "description": "Moisturizing beauty soap for soft and smooth skin.",
+    "mrp": 45,
+    "selling_price": 40,
+    "item_quantity_type": "75g",
+    "slug": "dove-soap-75g",
+    "categories": ["Personal Care"],
+    "image": "dove_soap_75g.png"
+  }
+]
