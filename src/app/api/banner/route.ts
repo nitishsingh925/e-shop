@@ -33,15 +33,18 @@ export async function GET(request: Request) {
       headers: { "Content-Type": "application/json" },
       status: 200,
     });
-  } catch (error) {
+  } catch (error: unknown) {
     // Log the error (in all environments)
     console.error("Database Error:", error);
 
     // Return an error response in case of failure
+    const errorMessage =
+      error instanceof Error ? error.message : "An unknown error occurred";
+
     return new Response(
       JSON.stringify({
         message: "Failed to retrieve banners",
-        error: error.message, // Include the error message in all environments
+        error: errorMessage, // Include the error message in all environments
       }),
       {
         headers: { "Content-Type": "application/json" },
