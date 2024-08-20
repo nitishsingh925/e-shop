@@ -3,19 +3,38 @@
     "$oid": "66bcc37508a02da24b3004eb"
   },
   "name": "top banner",
-  "image": "banner/1.jpg"
+  "image": "banner/top/1.jpg",
+  "type": "top"
 },
 {
   "_id": {
     "$oid": "66bcc4cc08a02da24b3004ec"
   },
   "name": "top banner",
-  "image": "banner/2.jpg"
+  "image": "banner/top/2.jpg",
+  "type": "top"
 },
 {
   "_id": {
     "$oid": "66bcc4e908a02da24b3004ed"
   },
   "name": "top banner",
-  "image": "banner/3.jpg"
+  "image": "banner/top/3.jpg",
+  "type": "top"
+},
+{
+  "_id": {
+    "$oid": "66bcc67808a02da24b3004ef"
+  },
+  "name": "top banner",
+  "image": "banner/top/4.jpg",
+  "type": "top"
+},
+{
+  "_id": {
+    "$oid": "66bcc5f208a02da24b3004ee"
+  },
+  "name": "bottom banner",
+  "image": "banner/bottom/1.jpeg",
+  "type": "bottom"
 }]

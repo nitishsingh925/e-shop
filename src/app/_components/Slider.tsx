@@ -10,10 +10,11 @@ import {
 import Image from "next/image";
 
 // Define the type for banner data
-interface Banner {
+export interface Banner {
   _id: string;
   name: string;
   image: string;
+  type: string;
 }
 
 const Slider: FC = () => {
@@ -22,7 +23,7 @@ const Slider: FC = () => {
   useEffect(() => {
     const fetchBanners = async () => {
       try {
-        const response = await fetch("api/banner");
+        const response = await fetch("api/banner?type=top");
         const data: Banner[] = await response.json();
         console.log(data);
 
