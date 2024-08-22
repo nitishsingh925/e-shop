@@ -37,7 +37,7 @@ const Slider: FC = () => {
   }, []);
 
   return (
-    <div className="py-10 px-4 sm:px-8 md:px-12 lg:px-16">
+    <div className="py-10">
       <Carousel>
         <CarouselContent>
           {banners.map((banner) => (
@@ -52,8 +52,8 @@ const Slider: FC = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="absolute top-1/2 -translate-y-1/2 left-5" />
+        <CarouselNext className="absolute top-1/2 -translate-y-1/2 right-5" />
       </Carousel>
     </div>
   );
