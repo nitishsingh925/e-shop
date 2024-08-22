@@ -13,13 +13,10 @@ const useCategories = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
-
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${baseUrl}/api/categories?populate=*`);
+        const response = await fetch(`/api/categories`);
         if (!response.ok) {
           throw new Error("Failed to fetch categories");
         }
@@ -34,7 +31,7 @@ const useCategories = () => {
     };
 
     fetchCategories();
-  }, [baseUrl]);
+  }, []);
 
   return { categories, loading, error };
 };
