@@ -39,7 +39,7 @@ const DropdownMenuComponent: FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="outline-none">
-        <h2 className="hidden md:flex gap-2 items-center border rounded-full p-2 px-10 bg-slate-200 cursor-pointer">
+        <h2 className="hidden md:flex gap-2 items-center border rounded-full p-2 px-10  cursor-pointer hover:bg-primary">
           <LayoutGrid className="h-5 w-5" />
           Category
         </h2>

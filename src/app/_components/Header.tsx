@@ -7,7 +7,7 @@ import DropdownMenuComponent from "@/components/DropdownMenuComponent";
 
 const Header: FC = () => {
   return (
-    <header className="flex px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-10 shadow-md items-center justify-between">
+    <header className="flex px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-10 shadow-md items-center justify-between sticky top-0 z-20 backdrop-blur-lg">
       <div className="flex items-center gap-8">
         <Image src="/logo.png" alt="logo" width={150} height={100} priority />
         <DropdownMenuComponent />
@@ -16,7 +16,7 @@ const Header: FC = () => {
           <input
             type="text"
             placeholder="Search"
-            className="outline-none"
+            className="outline-none bg-transparent placeholder:text-slate-700"
             aria-label="Search"
           />
         </div>
