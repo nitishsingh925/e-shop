@@ -1,5 +1,6 @@
 import BottomBannerHomePage from "./_components/BottomBannerHomePage";
 import CategoryList from "./_components/CategoryList";
+import Footer from "./_components/Footer";
 import ProductList from "./_components/ProductList";
 import Slider from "./_components/Slider";
 
@@ -11,6 +12,7 @@ export default function Home() {
         <CategoryList />
         <ProductList />
         <BottomBannerHomePage />
+        <Footer />
       </div>
     </main>
   );
