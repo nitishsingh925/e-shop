@@ -8,10 +8,15 @@ export default function Home() {
   return (
     <main className="px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 2xl:px-10">
       <div className="max-w-screen-xl mx-auto">
+        {/* Top Banner Slider */}
         <Slider />
+        {/* Category List  */}
         <CategoryList />
+        {/* Product List */}
         <ProductList />
+        {/* Bottom Banner full page single Image */}
         <BottomBannerHomePage />
+        {/* Footer */}
         <Footer />
       </div>
     </main>
