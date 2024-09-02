@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
+import Header from "@/components/Header";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
