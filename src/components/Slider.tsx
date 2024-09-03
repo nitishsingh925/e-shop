@@ -20,48 +20,56 @@ export interface Banner {
 
 const Slider: FC = () => {
   const [banners, setBanners] = useState<Banner[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true); // State to manage loading state
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const fetchBanners = async () => {
+    try {
+      const response = await fetch("api/banner?type=top");
+      const data: Banner[] = await response.json();
+      console.log(data);
+      setBanners(data);
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Failed to fetch banners:", error);
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchBanners = async () => {
-      try {
-        const response = await fetch("api/banner?type=top");
-        const data: Banner[] = await response.json();
-        console.log(data);
-        setBanners(data);
-        setIsLoading(false); // Set loading to false once data is fetched
-      } catch (error) {
-        console.error("Failed to fetch banners:", error);
-        setIsLoading(false); // Set loading to false on error as well
-      }
-    };
-
     fetchBanners();
   }, []);
+
+  // Component to display loading UI
+  const LoadingUI: FC = () => (
+    <CarouselItem>
+      <Skeleton className="w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] flex items-center justify-center rounded-2xl bg-gradient-to-r from-neutral-300 to-neutral-400 animate-pulse shadow-md"></Skeleton>
+    </CarouselItem>
+  );
+
+  // Component to display each banner
+  const BannerItem: FC<{ banner: Banner }> = ({ banner }) => (
+    <CarouselItem key={banner._id}>
+      <Image
+        src={`/${banner.image}`}
+        alt={banner.name}
+        width={1000}
+        height={400}
+        className="w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-2xl"
+      />
+    </CarouselItem>
+  );
 
   return (
     <div className="py-10">
       <Carousel>
         <CarouselContent>
           {isLoading ? (
-            // Display "Coming Soon" while loading
-            <>
-              <CarouselItem>
-                <Skeleton className="w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] flex items-center justify-center rounded-2xl bg-gradient-to-r from-neutral-300 to-neutral-400 animate-pulse shadow-md"></Skeleton>
-              </CarouselItem>
-            </>
+            // Display loading UI while fetching data
+            <LoadingUI />
           ) : (
             // Display banners once data is loaded
             banners.map((banner) => (
-              <CarouselItem key={banner._id}>
-                <Image
-                  src={`/${banner.image}`}
-                  alt={banner.name}
-                  width={1000}
-                  height={400}
-                  className="w-full h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover rounded-2xl"
-                />
-              </CarouselItem>
+              <BannerItem key={banner._id} banner={banner} />
             ))
           )}
         </CarouselContent>
