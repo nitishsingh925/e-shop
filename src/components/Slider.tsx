@@ -17,7 +17,9 @@ export interface Banner {
 }
 
 const Slider: FC = async () => {
-  const response = await fetch("http://localhost:3000/api/banner?type=top");
+  const response = await fetch(`http://localhost:3000/api/banner?type=top`, {
+    cache: "no-store",
+  });
   const banners: Banner[] = await response.json();
 
   // Component to display each banner

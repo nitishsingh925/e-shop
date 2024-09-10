@@ -7,9 +7,9 @@ const BottomBannerHomePage = async () => {
     name: string;
     image: string;
   }
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/banner?type=bottom`
-  );
+  const response = await fetch(`http://localhost:3000/api/banner?type=bottom`, {
+    cache: "no-store",
+  });
   const data: IBanner[] = await response.json();
   return (
     <div className="mt-5">

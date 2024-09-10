@@ -13,7 +13,9 @@ export interface Product {
 }
 
 const ProductList: React.FC = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
+  const response = await fetch(`http://localhost:3000/api/products`, {
+    cache: "no-store",
+  });
   const products: Product[] = await response.json();
 
   return (

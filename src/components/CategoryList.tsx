@@ -9,7 +9,9 @@ const CategoryList = async () => {
       url?: string;
     };
   }
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
+  const response = await fetch(`http://localhost:3000/api/categories`, {
+    cache: "no-store",
+  });
   const categories: Category[] = await response.json();
 
   return (
