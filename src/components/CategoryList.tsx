@@ -1,18 +1,16 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import useCategories from "@/hooks/useCategories";
 
-const CategoryList = () => {
-  const { categories, loading, error } = useCategories();
-
-  if (loading) {
-    return <div className="text-center py-4">Loading...</div>;
+const CategoryList = async () => {
+  interface Category {
+    _id: string;
+    name: string;
+    icon: {
+      url?: string;
+    };
   }
-
-  if (error) {
-    return <div className="text-red-500">{error}</div>;
-  }
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
+  const categories: Category[] = await response.json();
 
   return (
     <div className="p-5">

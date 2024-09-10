@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProductItem from "./ProductItem";
 
 export interface Product {
@@ -13,25 +12,9 @@ export interface Product {
   image: string;
 }
 
-const ProductList: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("/api/products");
-        if (!response.ok) {
-          throw new Error("Failed to fetch products");
-        }
-        const data: Product[] = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("Failed to fetch products", error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+const ProductList: React.FC = async () => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
+  const products: Product[] = await response.json();
 
   return (
     <div className="mt-10">

@@ -1,30 +1,19 @@
-"use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { Banner } from "./Slider";
+import React from "react";
 
-const BottomBannerHomePage = () => {
-  const [banners, setBanners] = useState<Banner[]>([]);
-
-  useEffect(() => {
-    const fetchBanners = async () => {
-      try {
-        const response = await fetch("/api/banner?type=bottom");
-        const data: Banner[] = await response.json();
-        console.log(data);
-
-        setBanners(data);
-      } catch (error) {
-        console.error("Failed to fetch banners:", error);
-      }
-    };
-
-    fetchBanners();
-  }, []);
-
+const BottomBannerHomePage = async () => {
+  interface IBanner {
+    _id: string;
+    name: string;
+    image: string;
+  }
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/banner?type=bottom`
+  );
+  const data: IBanner[] = await response.json();
   return (
     <div className="mt-5">
-      {banners.map((banner) => (
+      {data.map((banner) => (
         <Image
           key={banner._id}
           src={`/${banner.image}`}
