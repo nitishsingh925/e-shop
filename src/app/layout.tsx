@@ -7,7 +7,8 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "E-Shop",
-  description: "This app created by Nitish Singh for learning purposes.",
+  description:
+    "This app created by Nitish Singh for learning purposes. Next js with mongodb",
 };
 
 export default function RootLayout({
