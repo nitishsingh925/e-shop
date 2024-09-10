@@ -14,6 +14,9 @@ const bannerSchema = new mongoose.Schema(
 // Use an existing model or create a new one
 const Banner = mongoose.models.Banner || mongoose.model("Banner", bannerSchema);
 
+// Force dynamic rendering
+export const dynamic = "force-dynamic";
+
 // Function to handle GET requests
 export async function GET(request: Request) {
   // Connect to the database
