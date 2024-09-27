@@ -1,5 +1,6 @@
 import React from "react";
 import ProductItem from "./ProductItem";
+import { BASE_URL } from "@/utils/constant";
 
 export interface Product {
   name: string;
@@ -13,12 +14,9 @@ export interface Product {
 }
 
 const ProductList: React.FC = async () => {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/products`,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${BASE_URL}/api/products`, {
+    cache: "no-store",
+  });
   const products: Product[] = await response.json();
 
   return (

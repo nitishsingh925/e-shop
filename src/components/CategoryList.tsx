@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { BASE_URL } from "@/utils/constant";
 
 const CategoryList = async () => {
   interface Category {
@@ -9,12 +10,9 @@ const CategoryList = async () => {
       url?: string;
     };
   }
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/categories`,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${BASE_URL}/api/categories`, {
+    cache: "no-store",
+  });
   const categories: Category[] = await response.json();
 
   return (

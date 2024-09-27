@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { LayoutGrid } from "lucide-react";
+import { BASE_URL } from "@/utils/constant";
 
 const DropdownMenuComponent: FC = async () => {
   interface Category {
@@ -18,12 +19,9 @@ const DropdownMenuComponent: FC = async () => {
       url?: string;
     };
   }
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/categories`,
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${BASE_URL}/api/categories`, {
+    cache: "no-store",
+  });
   const categories: Category[] = await response.json();
 
   return (
