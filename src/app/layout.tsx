@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -19,8 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <Header />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Search, ShoppingBag } from "lucide-react";
 import DropdownMenuComponent from "@/components/DropdownMenuComponent";
+import { ModeToggle } from "./theme/ThemeModeToggle";
 
 const Header: FC = () => {
   return (
@@ -25,6 +26,7 @@ const Header: FC = () => {
         <h2 className="flex gap-2 items-center text-lg">
           <ShoppingBag aria-label="Shopping Bag Icon" /> 0
         </h2>
+        <ModeToggle />
         <Button>Login</Button>
       </div>
     </header>
