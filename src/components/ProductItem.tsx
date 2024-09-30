@@ -15,7 +15,7 @@ const ProductItem: FC<ProductItemProps> = ({ products }) => {
           index < 8 && (
             <div
               key={product.slug}
-              className="p-2 md:p-6 flex flex-col items-center justify-center gap-3 border rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition-transform transition-shadow duration-300 ease-in-out cursor-pointer"
+              className="p-2 md:p-6 flex flex-col items-center justify-center gap-3 border rounded-lg overflow-hidden hover:scale-105 hover:shadow-lg transition-transform transition-shadow duration-300 ease-in-out cursor-pointer dark:bg-neutral-800"
             >
               <Image
                 src={`/products/${product.image}`}
@@ -36,7 +36,7 @@ const ProductItem: FC<ProductItemProps> = ({ products }) => {
               <div className="flex justify-center">
                 <Button
                   variant="outline"
-                  className="text-primary hover:text-white hover:bg-primary transition-colors duration-300 ease-in-out"
+                  className="text-primary hover:text-white hover:bg-primary transition-colors duration-300 ease-in-out dark:bg-neutral-600"
                 >
                   Add to Cart
                 </Button>

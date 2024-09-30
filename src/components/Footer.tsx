@@ -101,16 +101,16 @@ const footerLinks: FooterSection[] = [
 
 const Footer: FC = () => {
   return (
-    <footer className="bg-white">
+    <footer>
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Company Info */}
           <div>
-            <div className="flex justify-center text-teal-600 sm:justify-start">
+            <div className="flex justify-center text-teal-600 dark:text-teal-400 sm:justify-start">
               <Image src="/logo.png" alt="Logo" width={200} height={150} />
             </div>
 
-            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+            <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 dark:text-gray-400 sm:max-w-xs sm:text-left">
               This E-shop is created for learning purposes. You can use this for
               personal or commercial use. Using MERN stack.
             </p>
@@ -122,7 +122,7 @@ const Footer: FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-teal-700 transition hover:text-teal-700/75"
+                    className="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-400 dark:hover:text-teal-400/75"
                     aria-label={social.label}
                   >
                     {social.icon}
@@ -136,7 +136,7 @@ const Footer: FC = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
             {footerLinks.map((section) => (
               <div key={section.title} className="text-center sm:text-left">
-                <p className="text-lg font-medium text-gray-900">
+                <p className="text-lg font-medium text-gray-900 dark:text-white">
                   {section.title}
                 </p>
                 <ul className="mt-8 space-y-4 text-sm">
@@ -144,7 +144,7 @@ const Footer: FC = () => {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="flex items-center gap-1.5 text-gray-700 transition hover:text-gray-700/75"
+                        className="flex items-center gap-1.5 text-gray-700 transition hover:text-gray-700/75 dark:text-gray-300 dark:hover:text-gray-400"
                       >
                         {link.icon}
                         <span>{link.label}</span>
@@ -159,26 +159,26 @@ const Footer: FC = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 border-t border-gray-100 pt-6">
+        <div className="mt-12 border-t border-gray-100 pt-6 dark:border-gray-800">
           <div className="text-center sm:flex sm:justify-between sm:text-left">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               <span className="block sm:inline">All rights reserved.</span>
               <a
-                className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                className="inline-block text-teal-600 underline transition hover:text-teal-600/75 dark:text-teal-400 dark:hover:text-teal-300"
                 href="#"
               >
                 Terms & Conditions
               </a>
               <span> &middot; </span>
               <a
-                className="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+                className="inline-block text-teal-600 underline transition hover:text-teal-600/75 dark:text-teal-400 dark:hover:text-teal-300"
                 href="#"
               >
                 Privacy Policy
               </a>
             </p>
 
-            <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 sm:order-first sm:mt-0">
               © NITISH_SINGH
             </p>
           </div>
